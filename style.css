@@ -1,68 +1,165 @@
-/* 簡單全站樣式 */
-body {
+/* Reset and global styles */
+* {
     margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #f8f8f8;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 導覽列 */
-header {
+body {
+    font-family: Times, serif;
     background: #fff;
-    border-bottom: 1px solid #ddd;
+    color: #222;
+    line-height: 1.8; /* more breathing room */
+    font-size: 1.1rem; /* slightly bigger text site-wide */
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #f8f5f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 10;
 }
+
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
 }
+
+header h1 a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.8rem; /* bigger name */
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    gap: 1.5rem;
 }
+
 nav a {
     text-decoration: none;
+    font-weight: bold;
     color: #333;
-    margin-left: 1rem;
-}
-nav a:hover {
-    color: #007acc;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
-/* Hero 區 */
+nav a:hover,
+nav a.active {
+    color: #9d8189;
+    border-bottom: 2px solid #9d8189;
+    padding-bottom: 0.2rem;
+}
+
+/* Hero Section */
 .hero {
-    background: url("images/hero-bg.jpg") center/cover no-repeat;
+    background: #e6e2dc;
     text-align: center;
-    padding: 6rem 1rem;
-    color: #fff;
-}
-.hero h1 {
-    margin: 0;
-    font-size: 3rem;
-}
-.hero p {
-    font-size: 1.4rem;
+    padding: 4rem 0;
 }
 
-/* 文章列表 */
-.blog-list {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-.blog-list a {
-    display: block;
-    text-decoration: none;
+.hero h2 {
+    font-size: 2.2rem;
     margin-bottom: 1rem;
-    padding: 1rem;
-    border-bottom: 1px solid #ddd;
 }
-.blog-list a:hover {
-    background: #f0f0f0;
+
+.hero p {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Page Content */
+.page {
+    padding: 3rem 0;
+}
+
+.page h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page { padding: 3rem 0; }
+.page h2 { 
+    text-align: center; font-size: 1.8rem; 
+    margin-bottom: 1rem; }
+
+.page ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Experience Section */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.experience-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+
+.experience-item .position {
+    font-style: normal; /* no italics for publications or positions */
+    color: #555;
+    margin-bottom: 0.2rem;
+}
+
+.experience-item .date {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Figures and Images */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+figure img {
+    max-width: 50%; /* smaller images on desktop */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+figcaption {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #f8f5f0;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container { flex-direction: column; align-items: flex-start; }
+    nav ul { flex-direction: column; gap: 1rem; }
+    figure img { max-width: 90%; }
 }
