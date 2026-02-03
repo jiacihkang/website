@@ -183,3 +183,24 @@ footer {
     height: auto;
   }
 }
+/* ===== About page photos (fixed size) ===== */
+.about-photos {
+  margin-top: 1.5rem;
+}
+
+.about-photo {
+  max-width: 260px;   /* ← 這就是你要的「正常大小」 */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-photos figure {
+  margin-bottom: 1rem;
+}
+
+.about-photos figcaption {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 0.3rem;
+}
