@@ -7,45 +7,67 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* ===== About page photos ===== */
-    figure {
-      margin: 1.5rem 0;
+    /* ===== About page: left image, right text ===== */
+    .about-container {
+      display: flex;
+      gap: 2rem;             /* 左右間距 */
+      align-items: flex-start;
+      margin-top: 2rem;
     }
 
-    figure img {
-      max-width: 420px;    /* 建議中等尺寸 */
+    .about-photo {
+      max-width: 320px;      /* 左側圖片大小 */
       width: 100%;
       height: auto;
-      display: block;
       border-radius: 6px;
-      margin: 0 auto;      /* 置中 */
+      flex-shrink: 0;
     }
 
-    figcaption {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 0.3rem;
-      text-align: center;
-    }
-
-    /* ===== Page spacing ===== */
-    .page {
-      padding: 2rem 0;
+    .about-text {
+      flex: 1;
       font-family: "Times New Roman", Times, serif;
       font-size: 1rem;
       line-height: 1.4;
       color: #1a1a1a;
     }
 
-    .page h2 {
+    .about-text h2 {
       font-size: 1.6rem;
       font-weight: 600;
       margin-bottom: 0.6rem;
     }
 
-    .page p {
-      font-size: 1rem;
+    .about-text p {
       margin-bottom: 0.6rem;
+    }
+
+    figcaption {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.3rem;
+      text-align: left;
+    }
+
+    /* ===== Responsive: stack on mobile ===== */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-photo {
+        max-width: 260px;
+        margin-bottom: 1rem;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+
+      figcaption {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -70,18 +92,23 @@
 <main>
   <section class="page">
     <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Hello! I am a palaeobiologist passionate about fossils, biodiversity, and scientific communication.
-        I specialize in 3D visualization of fossil specimens using micro CT data and am currently completing my
-        Erasmus Mundus master's program.
-      </p>
+      <div class="about-container">
+        <!-- 左圖 -->
+        <figure>
+          <img src="nmns.JPG" alt="At the National Museum of Natural Science" class="about-photo">
+          <figcaption>At the National Museum of Natural Science</figcaption>
+        </figure>
 
-      <figure>
-        <img src="nmns.JPG" alt="At the National Museum of Natural Science">
-        <figcaption>At the National Museum of Natural Science</figcaption>
-      </figure>
-
+        <!-- 右文 -->
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hello! I am a palaeobiologist passionate about fossils, biodiversity, and scientific communication.
+            I specialize in 3D visualization of fossil specimens using micro CT data and am currently completing my
+            Erasmus Mundus master's program.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
