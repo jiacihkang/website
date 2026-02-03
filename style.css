@@ -14,8 +14,8 @@ body {
   font-family: "Times New Roman", Times, serif;
   background: #ffffff;
   color: #1a1a1a;
-  font-size: 1rem;
-  line-height: 1.35;
+  font-size: 1rem;       /* 內文字體 */
+  line-height: 1.5;      /* 行距稍微寬鬆 */
 }
 
 /* ===============================
@@ -76,39 +76,49 @@ nav a.active {
   padding: 2rem 0;
 }
 
-.page h2 {
-  font-size: 1.6rem;
+/* 大標題 */
+.page h1, .page h2 {
+  font-size: 1.8rem;    /* 大標題 */
   font-weight: 600;
   margin-bottom: 0.6rem;
 }
 
-.page h3 {
-  font-size: 1.15rem;
+/* 副標題 */
+.page h3, .page h4 {
+  font-size: 1.3rem;    /* 副標題 */
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.4rem;
 }
 
+/* 內文/段落 */
 .page p,
 .page li {
-  font-size: 0.95rem;
-  margin-bottom: 0.2rem;
+  font-size: 1rem;       /* 內文 */
+  margin-bottom: 0.4rem;
 }
 
 /* ===============================
    Experience / CV
 ================================ */
 .experience-item {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .experience-item .date {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #777;
+  margin-bottom: 0.2rem;
 }
 
 .experience-item .position {
-  font-size: 0.85rem
+  font-size: 1rem;
   color: #444;
+  margin-bottom: 0.1rem;
+}
+
+.experience-item .school {
+  font-size: 1rem;
+  color: #1a1a1a;
 }
 
 /* ===============================
@@ -118,7 +128,7 @@ nav a.active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
-  margin: 1.2rem 0;
+  margin: 1.5rem 0;
 }
 
 .photo-gallery img {
@@ -128,6 +138,7 @@ nav a.active {
   border-radius: 6px;
   cursor: zoom-in;
 }
+
 /* ===============================
    Figure (generic, safe)
 ================================ */
@@ -154,30 +165,14 @@ footer {
 }
 
 /* ===============================
-   Responsive
+   About page photos
 ================================ */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-  }
-
-  .photo-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-gallery img {
-    height: auto;
-  }
-}
-/* ===== About page photos (fixed size) ===== */
 .about-photos {
   margin-top: 1.5rem;
 }
 
 .about-photo {
-  max-width: 260px;   /* ← 這就是你要的「正常大小」 */
+  max-width: 320px;   /* 左右照片大小 */
   width: 100%;
   height: auto;
   display: block;
@@ -191,4 +186,31 @@ footer {
   font-size: 0.85rem;
   color: #777;
   margin-top: 0.3rem;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-gallery img,
+  .about-photo {
+    height: auto;
+    max-width: 260px;
+  }
+
+  .about-container, .home-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
