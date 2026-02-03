@@ -5,10 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | KANG, JIA-CIH</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== About page specific styles ===== */
+    .about-photos {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .about-photos img {
+      max-width: 260px;   /* 控制圖片大小 */
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .about-photos figcaption {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 0.3rem;
+    }
+  </style>
 </head>
 
 <body>
-
 <header>
   <div class="container">
     <h1><a href="index.html">Home</a></h1>
@@ -27,35 +49,27 @@
 
 <main class="page">
   <div class="container">
-
     <h2>About Me</h2>
-
     <p>
       Hello! I am a palaeobiologist passionate about fossils, biodiversity, and scientific communication.
       I specialize in 3D visualization of fossil specimens using micro-CT data and am currently completing
       my Erasmus Mundus master's program.
     </p>
 
-    <!-- ===== About photos (controlled size) ===== -->
     <div class="about-photos">
-
       <figure>
-        <img src="your-photo.jpg" alt="Jia-Cih Kang portrait" class="about-photo">
+        <img src="your-photo.jpg" alt="Jia-Cih Kang portrait">
       </figure>
-
       <figure>
-        <img src="nmns.JPG" alt="At the National Museum of Natural Science" class="about-photo">
+        <img src="nmns.JPG" alt="At the National Museum of Natural Science">
         <figcaption>At the National Museum of Natural Science</figcaption>
       </figure>
-
     </div>
-
   </div>
 </main>
 
 <footer>
   <p>&copy; 2025 Jia-Cih Kang. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
