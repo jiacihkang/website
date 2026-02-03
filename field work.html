@@ -76,11 +76,14 @@
       <p class="position"><em>Department of Geology, National Taiwan University</em></p>
 
       <section class="photo-gallery">
-        <img src="IMG_5745.JPG" alt="Central Mountain Range, Taiwan">
-        <img src="IMG_5723.JPG" alt="Between Dewu Terrace and Satokoay Terrace, Taiwan">
-        <img src="IMG_5743.JPG" alt="Greenschist">
-        <img src="IMG_5756.JPG" alt="Alluvial fan panorama" class="panorama">
+      <img src="IMG_5745.JPG" alt="">
+      <img src="IMG_5723.JPG" alt="">
+      <img src="IMG_5743.JPG" alt="">
       </section>
+
+<figure class="panorama">
+  <img src="IMG_5756.JPG" alt="Alluvial fan panorama">
+</figure>
     </div>
 
     <!-- ===== Experience 2 ===== -->
@@ -121,7 +124,17 @@
 <div class="lightbox" id="lightbox">
   <img src="" alt="">
 </div>
+/* ===== Panorama image ===== */
+figure.panorama {
+  margin: 1.2rem 0;
+}
 
+figure.panorama img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
 <!-- ===== Lightbox Script ===== -->
 <script>
   const lightbox = document.getElementById("lightbox");
