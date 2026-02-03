@@ -7,18 +7,18 @@
 
 /* ===== Base Typography ===== */
 body {
-  font-family: "Times New Roman", Times, serif; /* 指定 Times / Times New Roman */
+  font-family: "Times New Roman", Times, serif;
   background: #ffffff;
   color: #1a1a1a;
-  line-height: 1.35; /* 緊湊行距 */
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.3; /* paleontologista CV 緊湊行距 */
 }
 
 /* ===== Layout ===== */
 .container {
   max-width: 760px;
   margin: 0 auto;
-  padding: 0 1.2rem;
+  padding: 0 1rem;
 }
 
 /* ===== Header ===== */
@@ -31,7 +31,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 0;
+  padding: 1.5rem 0;
 }
 
 header h1 a {
@@ -46,7 +46,7 @@ header h1 a {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.4rem;
+  gap: 1.2rem;
 }
 
 nav a {
@@ -63,49 +63,43 @@ nav a.active {
 
 /* ===== Hero / Intro ===== */
 .hero {
-  padding: 4rem 0 3rem;
-  background: none;
+  padding: 3rem 0 2rem;
 }
 
 .hero h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
-  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 0.6rem;
 }
 
 .hero p {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #555;
   max-width: 620px;
-  margin-bottom: 0.8rem;
-  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 0.6rem;
 }
 
 /* ===== Page Content ===== */
 .page {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 
 .page h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 0.6rem;
 }
 
 .page h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.2rem;
-  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 0.3rem;
 }
 
 .page p,
 .page li {
-  font-size: 1.05rem;
-  margin-bottom: 0.3rem;
-  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .page ul {
@@ -113,17 +107,17 @@ nav a.active {
 }
 
 .page ul li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 /* ===== Experience / CV specific ===== */
 .experience-item {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .experience-item .position {
   color: #444;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 .experience-item .date {
@@ -134,7 +128,7 @@ nav a.active {
 
 /* ===== Images (editorial style) ===== */
 figure {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 figure img {
@@ -143,7 +137,7 @@ figure img {
 }
 
 figcaption {
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
   font-size: 0.85rem;
   color: #777;
   text-align: left;
@@ -154,7 +148,7 @@ figcaption {
 footer {
   border-top: 1px solid #eee;
   margin-top: 3rem;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   font-size: 0.85rem;
   color: #777;
   text-align: center;
@@ -166,15 +160,15 @@ footer {
   header .container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.8rem;
+    gap: 0.6rem;
   }
 
   nav ul {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   .hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -182,8 +176,8 @@ footer {
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 14px;
-  margin: 2rem 0;
+  gap: 10px;
+  margin: 1.5rem 0;
 }
 
 .photo-gallery img {
@@ -197,21 +191,21 @@ footer {
 /* ===== CV / Experience page compact spacing ===== */
 .cv,
 .experience-item {
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .cv h2,
 .experience-item h2 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .cv h3,
 .experience-item h3 {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .cv p,
 .cv li,
 .experience-item p {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
