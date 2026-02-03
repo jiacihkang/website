@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience | KANG, JIA-CIH</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- ===== Lightbox styles ===== -->
+  <style>
+    .photo-gallery img {
+      cursor: zoom-in;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .lightbox::after {
+      content: "×";
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      font-size: 2.5rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 300;
+    }
+  </style>
 </head>
 
 <body>
@@ -76,6 +116,62 @@
 <footer>
   <p>&copy; 2025 Jia-Cih Kang. All rights reserved.</p>
 </footer>
+
+<!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="">
+</div>
+
+<!-- ===== Lightbox Script ===== -->
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  document.querySelectorAll(".photo-gallery").forEach(gallery => {
+    const images = Array.from(gallery.querySelectorAll("img"));
+
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        currentGallery = images;
+        currentIndex = index;
+        openLightbox();
+      });
+    });
+  });
+
+  function openLightbox() {
+    lightboxImg.src = currentGallery[currentIndex].src;
+    lightbox.classList.add("active");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    openLightbox();
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    openLightbox();
+  }
+
+  lightbox.addEventListener("click", closeLightbox);
+
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") showNext();
+    if (e.key === "ArrowLeft") showPrev();
+  });
+</script>
 
 </body>
 </html>
