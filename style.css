@@ -7,10 +7,10 @@
 
 /* ===== Base Typography ===== */
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif; /* 指定 Times / Times New Roman */
   background: #ffffff;
   color: #1a1a1a;
-  line-height: 1.75;
+  line-height: 1.35; /* 緊湊行距 */
   font-size: 1.05rem;
 }
 
@@ -53,9 +53,11 @@ nav a {
   text-decoration: none;
   font-size: 0.95rem;
   color: #666;
+  font-family: "Times New Roman", Times, serif;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   color: #000;
 }
 
@@ -68,29 +70,42 @@ nav a:hover {
 .hero h2 {
   font-size: 2.2rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .hero p {
   font-size: 1.05rem;
   color: #555;
   max-width: 620px;
+  margin-bottom: 0.8rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== Page Content ===== */
 .page {
-  padding: 3.5rem 0;
+  padding: 2.5rem 0;
 }
 
 .page h2 {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.page h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .page p,
 .page li {
   font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .page ul {
@@ -98,35 +113,28 @@ nav a:hover {
 }
 
 .page ul li {
-  margin-bottom: 0.6rem;
-}
-
-/* ===== Experience / Publications ===== */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin-top: 2rem;
-}
-
-.experience-item h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
   margin-bottom: 0.3rem;
+}
+
+/* ===== Experience / CV specific ===== */
+.experience-item {
+  margin-bottom: 1.2rem;
 }
 
 .experience-item .position {
   color: #444;
+  margin-bottom: 0.2rem;
 }
 
 .experience-item .date {
   font-size: 0.9rem;
   color: #777;
+  margin-bottom: 0.2rem;
 }
 
 /* ===== Images (editorial style) ===== */
 figure {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 figure img {
@@ -135,20 +143,22 @@ figure img {
 }
 
 figcaption {
-  margin-top: 0.6rem;
+  margin-top: 0.3rem;
   font-size: 0.85rem;
   color: #777;
   text-align: left;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== Footer ===== */
 footer {
   border-top: 1px solid #eee;
-  margin-top: 5rem;
-  padding: 2.5rem 0;
+  margin-top: 3rem;
+  padding: 2rem 0;
   font-size: 0.85rem;
   color: #777;
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== Responsive ===== */
@@ -167,13 +177,13 @@ footer {
     font-size: 1.8rem;
   }
 }
-/* ===== Image Gallery (multi-image layout) ===== */
 
+/* ===== Image Gallery (multi-image layout) ===== */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 }
 
 .photo-gallery img {
@@ -181,4 +191,27 @@ footer {
   height: 220px;
   object-fit: cover;
   border-radius: 6px;
+  cursor: zoom-in;
+}
+
+/* ===== CV / Experience page compact spacing ===== */
+.cv,
+.experience-item {
+  line-height: 1.35;
+}
+
+.cv h2,
+.experience-item h2 {
+  margin-bottom: 0.8rem;
+}
+
+.cv h3,
+.experience-item h3 {
+  margin-bottom: 0.2rem;
+}
+
+.cv p,
+.cv li,
+.experience-item p {
+  margin-bottom: 0.3rem;
 }
