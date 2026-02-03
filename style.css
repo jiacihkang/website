@@ -128,18 +128,6 @@ nav a.active {
   border-radius: 6px;
   cursor: zoom-in;
 }
-
-/* ===============================
-   About page portrait
-================================ */
-.about-photo {
-  max-width: 260px;
-  width: 100%;
-  height: auto;
-  margin: 1.5rem 0;
-  border-radius: 6px;
-}
-
 /* ===============================
    Figure (generic, safe)
 ================================ */
