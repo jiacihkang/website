@@ -187,6 +187,11 @@ footer {
   border-radius: 6px;
   cursor: zoom-in;
 }
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
 
 /* ===== CV / Experience page compact spacing ===== */
 .cv,
