@@ -151,17 +151,6 @@ figcaption {
   font-size: 0.85rem;
   color: #777;
 }
-/* ===== Panorama image ===== */
-figure.panorama {
-  margin: 1.2rem 0;
-}
-
-figure.panorama img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-}
 /* ================================
    Footer
 ================================ */
