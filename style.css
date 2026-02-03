@@ -1,10 +1,13 @@
+/* ===============================
+   Reset
+================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ================================
+/* ===============================
    Base Typography
 ================================ */
 body {
@@ -12,10 +15,10 @@ body {
   background: #ffffff;
   color: #1a1a1a;
   font-size: 1rem;
-  line-height: 1.35; /* 緊湊但可讀 */
+  line-height: 1.35;
 }
 
-/* ================================
+/* ===============================
    Layout
 ================================ */
 .container {
@@ -24,7 +27,7 @@ body {
   padding: 0 1rem;
 }
 
-/* ================================
+/* ===============================
    Header
 ================================ */
 header {
@@ -44,10 +47,9 @@ header h1 a {
   color: #1a1a1a;
   font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
-/* ================================
+/* ===============================
    Navigation
 ================================ */
 nav ul {
@@ -67,55 +69,50 @@ nav a.active {
   color: #000;
 }
 
-/* ================================
-   Page Structure
+/* ===============================
+   Page Content
 ================================ */
 .page {
   padding: 2rem 0;
 }
 
 .page h2 {
-  font-size: 1.6rem; /* 主標 */
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 0.6rem;
 }
 
 .page h3 {
-  font-size: 1.15rem; /* 副標 */
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
 .page p,
 .page li {
-  font-size: 0.95rem; /* 內文 */
+  font-size: 0.95rem;
   margin-bottom: 0.2rem;
 }
 
-.page ul {
-  padding-left: 1.2rem;
-}
-
-/* ================================
-   CV / Experience Blocks
+/* ===============================
+   Experience / CV
 ================================ */
 .experience-item {
   margin-bottom: 1.2rem;
 }
 
-.experience-item .position {
-  color: #444;
-  font-style: italic;
-}
-
 .experience-item .date {
   font-size: 0.85rem;
   color: #777;
-  margin-bottom: 0.25rem;
 }
 
-/* ================================
-   Image Gallery
+.experience-item .position {
+  font-style: italic;
+  color: #444;
+}
+
+/* ===============================
+   Photo Gallery (Field Work)
 ================================ */
 .photo-gallery {
   display: grid;
@@ -131,19 +128,32 @@ nav a.active {
   border-radius: 6px;
   cursor: zoom-in;
 }
-/* ================================
-   Figure / Caption (if used)
+
+/* ===============================
+   About page portrait
+================================ */
+.about-photo {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+/* ===============================
+   Figure (generic, safe)
 ================================ */
 figure {
   margin: 1.2rem 0;
 }
 
 figcaption {
-  margin-top: 0.2rem;
   font-size: 0.85rem;
   color: #777;
+  margin-top: 0.3rem;
 }
-/* ================================
+
+/* ===============================
    Footer
 ================================ */
 footer {
@@ -155,7 +165,7 @@ footer {
   text-align: center;
 }
 
-/* ================================
+/* ===============================
    Responsive
 ================================ */
 @media (max-width: 768px) {
@@ -163,10 +173,6 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.6rem;
-  }
-
-  nav ul {
-    gap: 0.8rem;
   }
 
   .photo-gallery {
