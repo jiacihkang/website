@@ -1,81 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education | KANG, JIA-CIH</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV | Jia-Cih Kang</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Lightbox ===== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 9999;
+    }
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-content img {
+      max-width: 90%;
+      max-height: 90vh;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1><a href="index.html">Home</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="cv.html" class="active">CV</a></li>
-                    <li><a href="field work.html">Field Work</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="research-footprint.html">Research Footprint</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <section class="page">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="experience-list">
-                    <div class="experience-item">
-                        <h3>M. Sc. Geoscience</h3>
-                        <p class="date">2023 – 2025</p>
-                        <p class="position">Palaeontology, Palaeobiology (PANGEA EMJMD)</p>
-                        <p class="university"><em>Université de Lille, Uppsala University</em></p>
-                    </div>
+<header>
+  <div class="container">
+    <h1><a href="index.html">Home</a></h1>
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+        <li><a href="field work.html">Field Work</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research-footprint.html">Research Footprint</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-                    <div class="experience-item">
-                        <h3>B. Sc. Life Science</h3>
-                        <p class="date">2019 – 2021</p>
-                        <p class="university"><em>Tunghai University, Taiwan</em></p>
-                    </div>
+<main class="page container cv">
+  <h2>Curriculum Vitae</h2>
 
-                    <div class="experience-item">
-                        <h3>A. A. German</h3>
-                        <p class="date">2014 – 2018</p>
-                        <p class="university"><em>Wenzao Ursuline University of Languages, Taiwan</em></p>
-                    </div>
-                    <h2>Experience</h2>
-                    <div class="experience-list">
-                        <div class="experience-item">
-                            <h3>Research Assistant</h3>
-                            <p class="date">Nov. 2025 – present</p>
-                            <p class="institute"><em>National Cheng Kung University, Disaster Prevention Research Center, Taiwan</em></p>
-                    </div>
-                        <div class="experience-list">
-                        <div class="experience-item">
-                            <h3>Teaching Assistant</h3>
-                            <p class="date">Sep. 2022 – June 2023</p>
-                            <p class="institute"><em>National Taiwan University, Taiwan</em></p>
-                    </div>
-                        <div class="experience-list">
-                        <div class="experience-item">
-                            <h3>Temporary staff</h3>
-                            <p class="date">Aug. 2021 – Dec. 2021</p>
-                            <p class="institute"><em>Taitung County Government (Department of Culture Heritage), Taiwan</em></p>
-            </div>
-                        <div class="experience-list">
-                        <div class="experience-item">
-                            <h3>Part-Time Project Assistant</h3>
-                            <p class="date">Sep. 2019 – Sep. 2021</p>
-                            <p class="institute"><em>National Museum of Natural Science (Department of Geology), Taiwan</em></p>
-            </div>
-        </section>
-    </main>
+  <!-- ===== Education / CV Sections ===== -->
+  <section class="experience-item">
+    <h3>PhD in Palaeobiology</h3>
+    <p class="date">2023 – Present</p>
+    <p class="position"><em>Uppsala University, Erasmus Pangea Program</em></p>
+    <div class="photo-gallery">
+      <img src="IMG_5745.JPG" alt="Lab work">
+      <img src="IMG_5723.JPG" alt="Field site">
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Jia-Cih Kang. All rights reserved.</p>
-    </footer>
+  <section class="experience-item">
+    <h3>MSc in Palaeobiology</h3>
+    <p class="date">2021 – 2023</p>
+    <p class="position"><em>Uppsala University</em></p>
+    <div class="photo-gallery">
+      <img src="IMG_5743.JPG" alt="Fossil analysis">
+    </div>
+  </section>
+
+  <section class="experience-item">
+    <h3>BSc in Geology</h3>
+    <p class="date">2016 – 2020</p>
+    <p class="position"><em>National Taiwan University</em></p>
+    <div class="photo-gallery">
+      <img src="IMG_5756.JPG" alt="Field study Taiwan">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Jia-Cih Kang. All rights reserved.</p>
+</footer>
+
+<!-- ===== Lightbox HTML ===== -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <img src="" alt="">
+  </div>
+</div>
+
+<!-- ===== Lightbox JS ===== -->
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = lightbox.querySelector("img");
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  document.querySelectorAll(".photo-gallery").forEach(gallery => {
+    const images = Array.from(gallery.querySelectorAll("img"));
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        currentGallery = images;
+        currentIndex = index;
+        openLightbox();
+      });
+    });
+  });
+
+  function openLightbox() {
+    lightboxImg.src = currentGallery[currentIndex].src;
+    lightbox.classList.add("active");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImg.src = "";
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    lightboxImg.src = currentGallery[currentIndex].src;
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    lightboxImg.src = currentGallery[currentIndex].src;
+  }
+
+  lightbox.addEventListener("click", closeLightbox);
+  lightboxImg.addEventListener("click", e => e.stopPropagation());
+
+  document.addEventListener("keydown", e => {
+    if(!lightbox.classList.contains("active")) return;
+    if(e.key === "Escape") closeLightbox();
+    if(e.key === "ArrowRight") showNext();
+    if(e.key === "ArrowLeft") showPrev();
+  });
+</script>
+
 </body>
 </html>
