@@ -6,12 +6,33 @@
   <title>CV | Jia-Cih Kang</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 調整 Education / Experience 副標題大小 */
+    /* ===== 副標題大小 ===== */
     main.cv h3 {
-      font-size: 1.8rem; /* 比原本大 2pt */
+      font-size: 1.8rem; /* 副標大 2pt */
       font-weight: 600;
       margin-top: 2rem;
       margin-bottom: 0.8rem;
+    }
+
+    /* ===== CV 內文字體調整 ===== */
+    main.cv .experience-item p {
+      font-size: 1.4rem; /* 內文字體大 2pt */
+      line-height: 1.4;  /* 保持緊湊行距 */
+      margin-bottom: 0.3rem;
+    }
+
+    main.cv .experience-item p.degree,
+    main.cv .experience-item p.position {
+      font-weight: 600;
+    }
+
+    main.cv .experience-item p.school {
+      font-style: normal;
+      color: #1a1a1a;
+    }
+
+    main.cv .experience-item p.date {
+      color: #555;
     }
   </style>
 </head>
@@ -40,19 +61,19 @@
   <h3>Education</h3>
 
   <section class="experience-item">
-    <p class="degree"><strong>Master of Geoscience, Paleobiology [Erasmus Mundus Joint Master Degree PANGEA]</strong></p>
+    <p class="degree">Master of Geoscience, Paleobiology [Erasmus Mundus Joint Master Degree PANGEA]</p>
     <p class="school">Université de Lille & Uppsala University</p>
     <p class="date">Aug. 2023 – Aug. 2025</p>
   </section>
 
   <section class="experience-item">
-    <p class="degree"><strong>Bachelor of Science, Life Sciences</strong></p>
+    <p class="degree">Bachelor of Science, Life Sciences</p>
     <p class="school">Tunghai University, Taiwan</p>
     <p class="date">Feb. 2019 – July 2021</p>
   </section>
 
   <section class="experience-item">
-    <p class="degree"><strong>Associate of Arts, German</strong></p>
+    <p class="degree">Associate of Arts, German</p>
     <p class="school">Wenzao Ursuline University of Languages, Taiwan</p>
     <p class="date">Aug. 2014 – July 2018</p>
   </section>
@@ -61,24 +82,24 @@
   <h3>Experience</h3>
 
   <section class="experience-item">
-    <p class="position"><strong>Research Assistant</strong></p>
+    <p class="position">Research Assistant</p>
     <p class="school">National Cheng Kung University (Disaster Prevention Research Center), Taiwan</p>
     <p class="date">Nov. 2025 – Present</p>
   </section>
 
   <section class="experience-item">
-    <p class="position"><strong>Teaching Assistant</strong></p>
+    <p class="position">Teaching Assistant</p>
     <p class="school">National Taiwan University, Taiwan</p>
     <p class="date">Sep. 2022 – June 2023</p>
   </section>
 
   <section class="experience-item">
-    <p class="position"><strong>Temporary Staff</strong></p>
+    <p class="position">Temporary Staff</p>
     <p class="school">Taitung County Government (Department of Cultural Heritage), Taiwan</p>
   </section>
 
   <section class="experience-item">
-    <p class="position"><strong>Part-Time Project Assistant</strong></p>
+    <p class="position">Part-Time Project Assistant</p>
     <p class="school">National Museum of Natural Science (Department of Geology), Taiwan</p>
     <p class="date">Sep. 2019 – Sep. 2021</p>
   </section>
