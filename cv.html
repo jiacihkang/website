@@ -5,29 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV | Jia-Cih Kang</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ===== Lightbox ===== */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      z-index: 9999;
-    }
-    .lightbox.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .lightbox-content img {
-      max-width: 90%;
-      max-height: 90vh;
-    }
-  </style>
 </head>
 <body>
 
@@ -50,96 +27,47 @@
 <main class="page container cv">
   <h2>Curriculum Vitae</h2>
 
-  <!-- ===== Education / CV Sections ===== -->
+  <!-- ===== Education ===== -->
   <section class="experience-item">
-    <h3>PhD in Palaeobiology</h3>
-    <p class="date">2023 – Present</p>
-    <p class="position"><em>Uppsala University, Erasmus Pangea Program</em></p>
-    <div class="photo-gallery">
-      <img src="IMG_5745.JPG" alt="Lab work">
-      <img src="IMG_5723.JPG" alt="Field site">
-    </div>
+    <h3>Université de Lille & Uppsala University</h3>
+    <p class="date">Aug. 2023 – Aug. 2025</p>
+    <p class="position"><em>Master of Geoscience, Paleobiology [Erasmus Mundus Joint Master Degree PANGEA]</em></p>
   </section>
 
   <section class="experience-item">
-    <h3>MSc in Palaeobiology</h3>
-    <p class="date">2021 – 2023</p>
-    <p class="position"><em>Uppsala University</em></p>
-    <div class="photo-gallery">
-      <img src="IMG_5743.JPG" alt="Fossil analysis">
-    </div>
+    <h3>Tunghai University, Taiwan</h3>
+    <p class="date">Feb. 2019 – July 2021</p>
+    <p class="position"><em>Bachelor of Science, Life Sciences</em></p>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section class="experience-item">
+    <h3>National Cheng Kung University (Disaster Prevention Research Center), Taiwan</h3>
+    <p class="date">Nov. 2025 – Present</p>
+    <p class="position"><em>Research Assistant</em></p>
   </section>
 
   <section class="experience-item">
-    <h3>BSc in Geology</h3>
-    <p class="date">2016 – 2020</p>
-    <p class="position"><em>National Taiwan University</em></p>
-    <div class="photo-gallery">
-      <img src="IMG_5756.JPG" alt="Field study Taiwan">
-    </div>
+    <h3>National Taiwan University, Taiwan</h3>
+    <p class="date">Sep. 2022 – June 2023</p>
+    <p class="position"><em>Teaching Assistant</em></p>
+  </section>
+
+  <section class="experience-item">
+    <h3>Taitung County Government (Department of Cultural Heritage), Taiwan</h3>
+    <p class="position"><em>Temporary Staff</em></p>
+  </section>
+
+  <section class="experience-item">
+    <h3>National Museum of Natural Science (Department of Geology), Taiwan</h3>
+    <p class="date">Sep. 2019 – Sep. 2021</p>
+    <p class="position"><em>Part-Time Project Assistant</em></p>
   </section>
 </main>
 
 <footer>
   <p>&copy; 2026 Jia-Cih Kang. All rights reserved.</p>
 </footer>
-
-<!-- ===== Lightbox HTML ===== -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-content">
-    <img src="" alt="">
-  </div>
-</div>
-
-<!-- ===== Lightbox JS ===== -->
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = lightbox.querySelector("img");
-
-  let currentGallery = [];
-  let currentIndex = 0;
-
-  document.querySelectorAll(".photo-gallery").forEach(gallery => {
-    const images = Array.from(gallery.querySelectorAll("img"));
-    images.forEach((img, index) => {
-      img.addEventListener("click", () => {
-        currentGallery = images;
-        currentIndex = index;
-        openLightbox();
-      });
-    });
-  });
-
-  function openLightbox() {
-    lightboxImg.src = currentGallery[currentIndex].src;
-    lightbox.classList.add("active");
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("active");
-    lightboxImg.src = "";
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % currentGallery.length;
-    lightboxImg.src = currentGallery[currentIndex].src;
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-    lightboxImg.src = currentGallery[currentIndex].src;
-  }
-
-  lightbox.addEventListener("click", closeLightbox);
-  lightboxImg.addEventListener("click", e => e.stopPropagation());
-
-  document.addEventListener("keydown", e => {
-    if(!lightbox.classList.contains("active")) return;
-    if(e.key === "Escape") closeLightbox();
-    if(e.key === "ArrowRight") showNext();
-    if(e.key === "ArrowLeft") showPrev();
-  });
-</script>
 
 </body>
 </html>
