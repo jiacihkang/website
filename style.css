@@ -78,14 +78,14 @@ nav a.active {
 
 /* 大標題 */
 .page h1, .page h2 {
-  font-size: 1.8rem;    /* 大標題 */
+  font-size: 1.8rem;    
   font-weight: 600;
   margin-bottom: 0.6rem;
 }
 
 /* 副標題 */
 .page h3, .page h4 {
-  font-size: 1.3rem;    /* 副標題 */
+  font-size: 1.3rem;    
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
@@ -93,8 +93,15 @@ nav a.active {
 /* 內文/段落 */
 .page p,
 .page li {
-  font-size: 1rem;       /* 內文 */
+  font-size: 1rem;       
   margin-bottom: 0.4rem;
+}
+
+/* 🔹 取消 UL 左縮排，防止 Publications / Contact 歪掉 */
+.page ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
 }
 
 /* ===============================
